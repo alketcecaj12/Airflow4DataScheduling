@@ -1,0 +1,19 @@
+[2026-03-02T10:23:00.177+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-02T10:23:00.190+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_copenhagen.load_to_postgres manual__2026-03-02T10:22:58.849246+00:00 [queued]>
+[2026-03-02T10:23:00.193+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_copenhagen.load_to_postgres manual__2026-03-02T10:22:58.849246+00:00 [queued]>
+[2026-03-02T10:23:00.193+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2026-03-02T10:23:00.198+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): load_to_postgres> on 2026-03-02 10:22:58.849246+00:00
+[2026-03-02T10:23:00.201+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=336) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-02T10:23:00.201+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'weather_copenhagen', 'load_to_postgres', 'manual__2026-03-02T10:22:58.849246+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/weather_dag.py', '--cfg-path', '/tmp/tmp1djjmmea']
+[2026-03-02T10:23:00.202+0000] {standard_task_runner.py:63} INFO - Started process 337 to run task
+[2026-03-02T10:23:00.202+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask load_to_postgres
+[2026-03-02T10:23:00.222+0000] {task_command.py:426} INFO - Running <TaskInstance: weather_copenhagen.load_to_postgres manual__2026-03-02T10:22:58.849246+00:00 [running]> on host fe1dc7a0a092
+[2026-03-02T10:23:00.257+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='alket' AIRFLOW_CTX_DAG_ID='weather_copenhagen' AIRFLOW_CTX_TASK_ID='load_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2026-03-02T10:22:58.849246+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-02T10:22:58.849246+00:00'
+[2026-03-02T10:23:00.258+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-02T10:23:00.272+0000] {logging_mixin.py:188} INFO - Loaded 24 rows into weather_copenhagen
+[2026-03-02T10:23:00.272+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-02T10:23:00.272+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-02T10:23:00.276+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=weather_copenhagen, task_id=load_to_postgres, execution_date=20260302T102258, start_date=20260302T102300, end_date=20260302T102300
+[2026-03-02T10:23:00.297+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-02T10:23:00.307+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-02T10:23:00.308+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
